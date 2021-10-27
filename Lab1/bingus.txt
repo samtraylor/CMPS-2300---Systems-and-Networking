@@ -1,0 +1,5 @@
+Total: 502
+Average: 83.666667
+Performance Rate: 0.058102
+highest Day: 6
+lowest Day: 1

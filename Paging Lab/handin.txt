@@ -1,0 +1,27 @@
+1) Four physical frames exist, meaning only four of the pages (even though there's more) can be stored in frames at one time.
+
+2) There is room for 2^12 (4096) virtual pages in memory if virtual memory is 2^32 bytes. Each page is 2^20 bytes (1 MB) in size, which we know is correct because the offset is 20 bits long (providing 2^20 possible addresses).
+
+3) The hexidecimal address 0x0012D687 gives decimal value 1234567. This only translates to a binary number of length 21, whereas we know our virtual addresses should each be 32 bits long. We can assume that to convert to it to a 32 bit address without changing the significant bits, we add 11 leading zeroes, still yielding 12D687 in hex (00000000000100101101011010000111 in binary). So, with the first bit 12 bits being VPN, we know our VPN is 1, meaning page 1. The OS then knows to index the page table and find out which physical frame page 1 lies in. Then, the binary value of that number (the PFN) will be substituted for the part of the address that was previously the VPN, at which point you have an address to physical memory. It will go to the proper physical page Frame, then use the next 20 bits to specify which byte within that page, at which point it has the exact address.
+
+4) 0xE12C = 0x312C
+0x3A9D = 0xAA9D
+0xA9D9 = 0x59D9
+0x7001 = 0xF001
+0xACA1 = 0x5CA1
+
+5) 1100000000000001 (or 0xC001) indicates a page Frame number of 12, which isn't mapped in the page table given, meaning it would generate a fault (since there is no byte 1 of a page that cannot be found).
+
+6) The size of a page table should grow while the address space does. That's because more pages are required to cover that whole space. 
+
+7) When page size grows, the table decreases because less pages exist.
+
+8) Really big pages would be incredibly memory inefficient seeing as most processes don't use all that much memory.
+
+9) If you increase the % of pages allocated, more valid memory access operations exist, at the cost of free space
+
+10) The parameter with too small of a physical memory is unrealistic.
+
+11) Creating a ridiculously large table causes you to run into issues eventually, but the example of address space being larger than physical memory would cause an obvious problem of trying to allocate more than what exists.
+
+
