@@ -1,0 +1,37 @@
+Sams-MacBook-Pro:~ samtraylor$ ./script1.sh ~/handin.txt ~/Desktop 1 4
+This line's for the terminal.
+The second argument is /Users/samtraylor/Desktop
+The fourth argument is bigger.
+The first provided arg exists.
+The first provided arg corresponds to a file
+The second provided arg does exist.
+The second provided arg corresponds to a directory.
+ls *.pdf 2> /dev/null
+
+Sams-MacBook-Pro:~ samtraylor$ ./script1.sh ~/virus.txt ~/Desktop 1 0
+This line's for the terminal.
+The second argument is /Users/samtraylor/Desktop
+The third argument is bigger.
+The first provided file doesn't exist
+The second provided arg does exist.
+The second provided arg corresponds to a directory.
+ls *.pdf 2> /dev/null
+
+Sams-MacBook-Pro:~ samtraylor$ ./script1.sh ~/virus.txt ~/Stuxnet 20 0
+This line's for the terminal.
+The second argument is /Users/samtraylor/Stuxnet
+The third argument is bigger.
+The first provided file doesn't exist
+The second provided arg doesn't exist
+ls Lab4 (1).pdf 2> /dev/null
+
+Sams-MacBook-Pro:~ samtraylor$ ./script1.sh ~/copy.txt ~/eclipse 30 31
+This line's for the terminal.
+The second argument is /Users/samtraylor/eclipse
+The fourth argument is bigger.
+The first provided arg exists.
+The first provided arg corresponds to a file
+The second provided arg does exist.
+The second provided arg corresponds to a directory.
+ls Lab4 (1).pdf 2> /dev/null
+Sams-MacBook-Pro:~ samtraylor$ 

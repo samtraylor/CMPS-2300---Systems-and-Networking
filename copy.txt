@@ -1,0 +1,5 @@
+Question 1: dhcp-206-186:~ samtraylor$
+Question 2: /Users/samtraylor
+Question 3: Adlm, Applications, Applications Alias, Desktop, Documents, Downloads, Library, Movies, Music, Pictures, Public, VirtualBox VMs, eclipse, eclipse-workspace
+Question 4: /Users/samtraylor/cmps2300
+Question 5:
